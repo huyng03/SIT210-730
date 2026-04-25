@@ -1,0 +1,199 @@
+{
+  "data": {
+    "me": {
+      "login": "s223009962",
+      "email": "s223009962@deakin.edu.au",
+      "id": "32777194",
+      "profile_image_url": null,
+      "profile_username": null,
+      "timezone": "Australia/Melbourne",
+      "bio": null,
+      "website": null,
+      "created_at": "2025-04-14 05:27:22 -0700",
+      "organizations": [],
+      "devices": []
+    },
+    "live_channels": [
+      {
+        "user_name_field": null,
+        "user_id_field": null,
+        "created_at": "2025-04-14 05:27:22 -0700",
+        "offline": false,
+        "channel": {
+          "module_name": "email",
+          "name": "Email"
+        }
+      },
+      {
+        "user_name_field": null,
+        "user_id_field": null,
+        "created_at": "2025-04-14 05:27:22 -0700",
+        "offline": false,
+        "channel": {
+          "module_name": "email_digest",
+          "name": "Email Digest"
+        }
+      },
+      {
+        "user_name_field": null,
+        "user_id_field": null,
+        "created_at": "2025-04-14 05:27:22 -0700",
+        "offline": false,
+        "channel": {
+          "module_name": "date_and_time",
+          "name": "Date & Time"
+        }
+      },
+      {
+        "user_name_field": null,
+        "user_id_field": null,
+        "created_at": "2025-04-14 05:27:22 -0700",
+        "offline": false,
+        "channel": {
+          "module_name": "weather",
+          "name": "Weather Underground"
+        }
+      },
+      {
+        "user_name_field": null,
+        "user_id_field": null,
+        "created_at": "2025-04-14 05:27:22 -0700",
+        "offline": false,
+        "channel": {
+          "module_name": "space",
+          "name": "Space"
+        }
+      },
+      {
+        "user_name_field": null,
+        "user_id_field": null,
+        "created_at": "2025-04-14 05:27:22 -0700",
+        "offline": false,
+        "channel": {
+          "module_name": "ifttt",
+          "name": "IFTTT"
+        }
+      },
+      {
+        "user_name_field": null,
+        "user_id_field": null,
+        "created_at": "2025-04-14 05:27:22 -0700",
+        "offline": false,
+        "channel": {
+          "module_name": "feed",
+          "name": "RSS Feed"
+        }
+      },
+      {
+        "user_name_field": "s223009962",
+        "user_id_field": "bl2SWLMVGPSPoulJ_wCRF7",
+        "created_at": "2025-04-14 05:27:24 -0700",
+        "offline": false,
+        "channel": {
+          "module_name": "maker_webhooks",
+          "name": "Webhooks"
+        }
+      },
+      {
+        "user_name_field": "Huy Nguyễn",
+        "user_id_field": "109294282262394298411",
+        "created_at": "2025-04-14 07:26:35 -0700",
+        "offline": false,
+        "channel": {
+          "module_name": "youtube",
+          "name": "YouTube"
+        }
+      },
+      {
+        "user_name_field": "s223009962",
+        "user_id_field": null,
+        "created_at": "2025-04-14 07:26:54 -0700",
+        "offline": false,
+        "channel": {
+          "module_name": "mocker",
+          "name": "Mocker"
+        }
+      }
+    ],
+    "live_applets": [
+      {
+        "created_at": "2026-04-06 22:15:51 -0700",
+        "applet": {
+          "normalized_applet": {
+            "id": "JFL4WyDB",
+            "name": "If Maker Event \"sunlight_off\", then Send me an email at s223009962@deakin.edu.au",
+            "description": "",
+            "status": "enabled_for_user",
+            "created_at": "2026-04-06 22:15:51 -0700",
+            "is_tombstoned": false
+          }
+        },
+        "live_applet_trigger": {
+          "channel_module_name": "maker_webhooks",
+          "module_name": "event",
+          "live_fields": [
+            {
+              "name": "event",
+              "value_json": "\"sunlight_off\\n\""
+            }
+          ]
+        },
+        "live_applet_actions": [
+          {
+            "channel_module_name": "email",
+            "module_name": "send_me_email",
+            "live_fields": [
+              {
+                "name": "subject",
+                "value_json": "\"Terrarium Sunlight Stopped\""
+              },
+              {
+                "name": "body",
+                "value_json": "\"Light: {{Value1}} lx | Temp: {{Value2}}°C | Total exposure today: {{Value3}} mins\""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "created_at": "2026-04-21 20:13:47 -0700",
+        "applet": {
+          "normalized_applet": {
+            "id": "xtNKehgV",
+            "name": "If Maker Event \"sunlight_on\", then Send me an email at s223009962@deakin.edu.au",
+            "description": "",
+            "status": "enabled_for_user",
+            "created_at": "2026-04-21 20:13:47 -0700",
+            "is_tombstoned": false
+          }
+        },
+        "live_applet_trigger": {
+          "channel_module_name": "maker_webhooks",
+          "module_name": "event",
+          "live_fields": [
+            {
+              "name": "event",
+              "value_json": "\"\\\"sunlight_on\\\"\\n\""
+            }
+          ]
+        },
+        "live_applet_actions": [
+          {
+            "channel_module_name": "email",
+            "module_name": "send_me_email",
+            "live_fields": [
+              {
+                "name": "subject",
+                "value_json": "\"Terrarium Sunlight Started\""
+              },
+              {
+                "name": "body",
+                "value_json": "\"Light: {{Value1}} lx | Temp: {{Value2}}°C | Total exposure today: {{Value3}} mins\""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
